@@ -20,4 +20,4 @@ if args.exclude_hidden:
 	filelist = [item for item in filelist if not is_hidden(item)]
 
 result = {"timestamp":timestamp, "hiddenFiles": not args.exclude_hidden, "files":filelist}
-print(json.dumps(result,indent=args.pretty_print_indent))
+print(json.dumps(result,indent=args.pretty_print_indent,ensure_ascii=False))
